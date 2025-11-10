@@ -1,12 +1,12 @@
-# 🎨 Convertify
+#  Convertify
 <img src="rep%20assets/popup.png" alt="Extension popup" width="200"/> <img src="rep%20assets/dropdown%20popout.png" alt="Dropdown popout" width="200"/>
 
-A lightweight and user-friendly Chrome extension
+A user-friendly Chrome extension
 - Convert images directly from the browser
 - Download  direcly any formats through the context menu
 - PNG, JPEG, WEBP, TIFF, BMP, GIF, HEIC, SVG and ICO.
 
-> 🛠️ _This is my first ever project_.
+>  _This was created with ai_.
 
 ---
 
