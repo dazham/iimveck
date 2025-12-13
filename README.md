@@ -9,6 +9,7 @@ The best user-friendly Chrome extension to:
 > _I was frusted of constantly downloading files and using online converters.  
 > So I made this to make my life easier. Easily the best of such extensions you will use._
 
+---
 
 ### UI Showcase
 
