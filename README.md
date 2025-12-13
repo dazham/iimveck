@@ -10,7 +10,7 @@ The best user-friendly Chrome extension to:
 > So I made this to make my life easier. Easily the best of such extensions you will use._
 
 
-# Showcase
+## Showcase
 
 <br />
 
