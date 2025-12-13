@@ -9,6 +9,9 @@ The best user-friendly Chrome extension to:
 > _I was frusted of constantly downloading files and using online converters.  
 > So I made this to make my life easier. Easily the best of such extensions you will use._
 
+
+# Showcase
+
 <br />
 
 <img src="rep%20assets/Popup.png" alt="Extension popup" width="250"/> <img src="rep%20assets/PopoutDropdown.png" alt="Dropdown Menu for Selecting Different Image Formats" width="250"/>
