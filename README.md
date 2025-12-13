@@ -6,7 +6,7 @@ A user-friendly Chrome extension
 - Download  direcly any formats through the context menu
 - PNG, JPEG, WEBP, TIFF, BMP, GIF, HEIC, SVG and ICO.
 
->  _This was created with ai_.
+>  _I was frusted of constantly downloading files and using online converters. So I made this to make my life easier._.
 
 ---
 
