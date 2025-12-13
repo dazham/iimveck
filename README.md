@@ -28,13 +28,13 @@ To Download the latest version from the [Releases](../../releases) tab.
 
 Extension Popup
 
-<img src="rep%20assets/popup.png" alt="Extension popup" width="200"/> <img src="rep%20assets/dropdown%20popout.png" alt="Dropdown popout" width="200"/>
+<img src="rep%20assets/Popup.png" alt="Extension popup" width="200"/> <img src="rep%20assets/PopoutDropdown.png" alt="Dropdown Menu for Selecting Different Image Formats" width="200"/>
 
  ---
 
 Right-Click Context Menu
 
-<img src="rep%20assets/ContextMenu.png" alt="Context menu" width="500"/>
+<img src="rep%20assets/ContextMenu.png" alt="Context menu options" width="500"/>
 
 
 
