@@ -1,5 +1,5 @@
 #  Convertify
-<img src="rep%20assets/Popup.png" alt="Extension popup" width="200"/> <img src="rep%20assets/PopoutDropdown.png" alt="Dropdown Menu for Selecting Different Image Formats" width="200"/> <img src="rep%20assets/ContextMenu.png" alt="Context menu options" width="200"/>
+<img src="rep%20assets/Popup.png" alt="Extension popup" width="200"/> <img src="rep%20assets/PopoutDropdown.png" alt="Dropdown Menu for Selecting Different Image Formats" width="300"/> <img src="rep%20assets/ContextMenu.png" alt="Context menu options" width="500"/>
 
 
 The best user-friendly Chrome extension to:
