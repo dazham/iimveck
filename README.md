@@ -1,5 +1,6 @@
 #  Convertify
-<img src="rep%20assets/Popup.png" alt="Extension popup" width="200"/> <img src="rep%20assets/PopoutDropdown.png" alt="Dropdown Menu for Selecting Different Image Formats" width="200"/>
+<img src="rep%20assets/Popup.png" alt="Extension popup" width="200"/> <img src="rep%20assets/PopoutDropdown.png" alt="Dropdown Menu for Selecting Different Image Formats" width="200"/> <img src="rep%20assets/ContextMenu.png" alt="Context menu options" width="200"/>
+
 
 The best user-friendly Chrome extension to:
 - Convert images directly from the browser
