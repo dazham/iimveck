@@ -24,7 +24,7 @@ To Download the latest version from the [Releases](../../releases) tab.
 ---
 
 
-## Screenshots
+## Showcase
 
 Extension Popup
 
