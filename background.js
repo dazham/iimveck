@@ -13,12 +13,17 @@ function createContextMenu() {
             contexts: ['image']
         });
 
-        // Create sub-menu items for each format
+        // Create sub-menu items for ALL formats
         const formats = [
             { id: 'png', title: 'PNG' },
             { id: 'jpeg', title: 'JPEG' },
             { id: 'webp', title: 'WebP' },
-            { id: 'bmp', title: 'BMP' }
+            { id: 'tiff', title: 'TIFF' },
+            { id: 'bmp', title: 'BMP' },
+            { id: 'gif', title: 'GIF' },
+            { id: 'heic', title: 'HEIC' },
+            { id: 'svg+xml', title: 'SVG' },
+            { id: 'x-icon', title: 'ICO' }
         ];
 
         formats.forEach(format => {
@@ -39,8 +44,13 @@ function getFileNameWithNewFormat(url, format) {
     const splitURI = reURI.exec(url);
     let suggestedFilename = reFilename.exec(splitURI[2] || '') || ['image'];
     
+    // Clean up the extension logic
+    let extension = format;
+    if (format === 'svg+xml') extension = 'svg';
+    if (format === 'x-icon') extension = 'ico';
+
     // Remove the old extension and add new one
-    suggestedFilename = suggestedFilename[0].replace(/\.[^/.]+$/, '') + '.' + format;
+    suggestedFilename = suggestedFilename[0].replace(/\.[^/.]+$/, '') + '.' + extension;
     
     return suggestedFilename;
 }
@@ -78,6 +88,8 @@ async function convertAndDownloadImage(srcUrl, format, tabId) {
                     const ctx = canvas.getContext('2d');
                     ctx.drawImage(img, 0, 0);
                     
+                    // The format here comes from the menu ID (e.g. 'png', 'svg+xml', 'x-icon')
+                    // We construct the MIME type: 'image/png', 'image/x-icon', etc.
                     const dataUrl = canvas.toDataURL(`image/${format}`);
                     URL.revokeObjectURL(blobUrl);
                     

@@ -1,63 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta information and character encoding for the page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertify</title>
-    
-    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <!-- Main title of the extension -->
-    <h1>Convertify</h1>
-    <!-- credit text -->
-    <p class="byline">by dazham</p>
 
-    <!-- File drop area (for file input or drag-and-drop) -->
-    <div class="file-drop-area" id="fileDropArea">
-        <!-- Instructions for file upload -->
-        <p>Click to choose file or drag and drop</p>
+    <div class="glass-container">
         
-        <!-- Hidden file input for file selection -->
-        <input type="file" id="fileInput" accept="image/*">
-        
-        <!-- Initially blank space for file name -->
-        <span id="fileName"></span>
+        <div class="header">
+            <h1>Convertify</h1>
+            <p class="byline">by dazham</p>
+        </div>
 
-        <!-- File details container for the image preview and file name display -->
-        <div id="fileDetails">
-            <!-- Image preview area (shown once a file is selected) -->
-            <img id="filePreview" /> 
+        <div class="file-drop-area" id="fileDropArea">
+            <input type="file" id="fileInput" accept="image/*">
             
-            <!-- Display the name of the chosen file -->
-            <p id="fileNameDisplay"></p>
+            <div class="drop-content">
+                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <p class="instruction">Click or Drop Image</p>
+            </div>
+
+            <div id="fileDetails" class="hidden">
+                <div class="preview-wrapper">
+                    <img id="filePreview" />
+                </div>
+                <p id="fileNameDisplay"></p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="select-wrapper">
+                <select id="formatSelect">
+                    <option value="image/png">PNG</option>
+                    <option value="image/jpeg">JPEG</option>
+                    <option value="image/webp">WEBP</option>
+                    <option value="image/tiff">TIFF</option>
+                    <option value="image/bmp">BMP</option>
+                    <option value="image/gif">GIF</option>
+                    <option value="image/heic">HEIC</option>
+                    <option value="image/svg+xml">SVG</option>
+                    <option value="image/x-icon">ICO</option>
+                </select>
+                <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+
+            <button id="convertButton">Convert Image</button>
+        </div>
+
+        <div id="loadingBar">
+            <div id="loadingProgress"></div>
         </div>
     </div>
 
-    <!-- Dropdown menu to select desired image format for conversion -->
-    <select id="formatSelect">
-        <option value="image/png">PNG</option>
-        <option value="image/jpeg">JPEG</option>
-        <option value="image/webp">WEBP</option>
-        <option value="image/tiff">TIFF</option>
-        <option value="image/bmp">BMP</option>
-        <option value="image/gif">GIF</option>
-        <option value="image/heic">HEIC</option>
-        <option value="image/svg+xml">SVG</option>
-        <option value="image/x-icon">ICO</option>
-    </select>
-
-    <!-- Button to trigger the image conversion and download -->
-    <button id="convertButton">Convert & Download</button>
-
-    <!-- Loading bar to indicate the conversion process -->
-    <div id="loadingBar" style="display: none;">
-        <div id="loadingProgress"></div>
-    </div>
-
-    <!-- Link to the JavaScript file to handle the logic -->
     <script src="popup.js"></script>
 </body>
 </html>

@@ -1,124 +1,227 @@
-body {
-    font-family: 'Segoe UI', Calibri, 'Helvetica Neue', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    width: 250px;
+/* =========================================
+   VARIABLES & GLOBAL RESETS (Matched to Unraveled)
+   ========================================= */
+:root {
+    --bg-color: #202124;
+    --card-bg: rgba(0, 0, 0, 0.4);
+    --glass-bg: rgba(30, 30, 30, 0.85);
+    --text-main: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.5);
+    --border-light: rgba(255, 255, 255, 0.1);
 }
 
-h1 {
-    font-size: 20px;
+* { box-sizing: border-box; }
+
+body {
     margin: 0;
+    width: 320px;
+    background-color: var(--bg-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* =========================================
+   LAYOUT & TYPOGRAPHY
+   ========================================= */
+.glass-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header { text-align: center; }
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
 }
 
 .byline {
-    font-size: 14px;
-    color: #aaa;
-    margin-top: 4px;
-    margin-bottom: 15px;
-    font-style: italic;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 4px 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Default style for file input */
-input[type="file"] {
-    margin-top: 10px;
-    width: 100%;
-    padding: 8px;
-    display: none; /* Hide default input */
-}
-
-/* Drag-and-drop area styling */
+/* =========================================
+   FILE DROP AREA
+   ========================================= */
 .file-drop-area {
-    border: 2px dashed #5a5a5a;
-    padding: 20px;
-    width: 100%;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 25px 20px;
     text-align: center;
     cursor: pointer;
-    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.file-drop-area:hover {
-    background-color: #444;
+.file-drop-area:hover, .file-drop-area.hover {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
+input[type="file"] { display: none; }
+
+/* Initial State Content */
+.drop-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.upload-icon {
+    width: 32px;
+    height: 32px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.file-drop-area:hover .upload-icon { color: white; }
+
+.instruction {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+}
+
+/* =========================================
+   PREVIEW IMAGE
+   ========================================= */
 #fileDetails {
-    font-size: 16px;
-    color: #fff;
-    margin-top: 10px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    animation: fadeIn 0.3s ease;
+}
+.hidden { display: none !important; }
+
+.preview-wrapper {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 #filePreview {
-    margin-top: 10px;
-    width: 100%;
-    max-height: 100px;  /* Reduced max height */
-    object-fit: contain; /* Ensures the image is scaled without distortion */
-    display: none; /* Hide initially */
-    border-radius: 8px;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    object-fit: contain;
 }
 
-/* File name display styling */
-#fileName {
-    font-size: 14px; /* Adjust font size to match other text */
-}
-
-/* Highlighted file name when chosen */
 #fileNameDisplay {
-    font-size: 14px; /* Match the font size to the 'Click to drag...' text */
-    font-weight: normal;
-    color: #00bfff; /* Vibrant blue */
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
     text-align: center;
-    margin-top: 10px; /* Ensure this text is below the image preview */
+    word-break: break-all;
+    max-width: 100%;
 }
 
-/* Format selection and button styling */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* =========================================
+   CONTROLS
+   ========================================= */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Custom Select Wrapper */
+.select-wrapper { position: relative; width: 100%; }
+
 select {
-    margin-top: 10px;
-    padding: 8px;
     width: 100%;
-    background-color: #414141;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    color: white;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
+select:hover, select:focus {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.select-arrow {
+    position: absolute; right: 15px; top: 50%;
+    transform: translateY(-50%);
+    width: 16px; height: 16px;
+    pointer-events: none;
+    color: var(--text-muted);
+}
+
+/* Button */
 button {
-    margin-top: 10px;
-    padding: 10px;
     width: 100%;
-    background-color: #007aff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: white;
+    color: black;
+    font-size: 0.95rem;
+    font-weight: 600;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
+    transition: all 0.2s ease;
 }
 
 button:hover {
-    background-color: #005ecb;
-
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255,255,255,0.1);
 }
 
-select:hover {
-    background-color: #5a5a5a;
-}
+button:active { transform: translateY(0); }
 
-/* Loading bar styling */
+/* =========================================
+   LOADING BAR
+   ========================================= */
 #loadingBar {
     width: 100%;
-    height: 5px;
-    background-color: #333;
-    margin-top: 10px;
+    height: 4px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    display: none;
+    margin-top: 5px;
 }
 
 #loadingProgress {
     width: 0%;
     height: 100%;
-    background-color: #007bff; /* Loading progress color */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
     transition: width 0.3s ease;
 }
