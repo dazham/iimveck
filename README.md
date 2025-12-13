@@ -11,9 +11,7 @@ The best user-friendly Chrome extension to:
 
 <br />
 
-<img src="rep%20assets/Popup.png" alt="Extension popup" width="250" />
-<img src="rep%20assets/PopoutDropdown.png" alt="Dropdown Menu for Selecting Different Image Formats" width="250" />
-
+<img src="rep%20assets/Popup.png" alt="Extension popup" width="250"/> <img src="rep%20assets/PopoutDropdown.png" alt="Dropdown Menu for Selecting Different Image Formats" width="250"/>
 > Extension Popup
 
 <br />
