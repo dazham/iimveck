@@ -5,12 +5,9 @@
 
 Right-click. Convert. Download.
 
----
 
-The best user-friendly chromium extension to:
-
-- Convert images directly from the browser
-- Download  direcly any formats through the context menu
+- Convert images directly from the browser.
+- Download images direcly on any formats through the context menu.
 - (PNG, JPEG, WEBP, TIFF, BMP, GIF, HEIC, SVG and ICO).
 
 > _I was frusted of constantly downloading files and using online converters.  
