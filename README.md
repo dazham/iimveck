@@ -18,7 +18,7 @@
 
 <br />
 
-<img src="rep%20assets/Popup.png" alt="Extension popup" width="250"/> <img src="rep%20assets/PopoutDropdown.png" alt="Dropdown Menu for Selecting Different Image Formats" width="250"/>
+<img src="rep%20assets/Popup.png" alt="Extension popup" width="200"/> <img src="rep%20assets/PopoutDropdown.png" alt="Dropdown Menu for Selecting Different Image Formats" width="200"/>
 > Extension Popup
 
 <br />
