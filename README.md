@@ -10,8 +10,7 @@
 - Download images direcly on any formats through the context menu.
 - (PNG, JPEG, WEBP, TIFF, BMP, GIF, HEIC, SVG and ICO).
 
-> _I was frusted of constantly downloading files and using online converters.  
-> So I made this to make my life easier. Easily the best of such extensions you will use._
+> _I was frusted of constantly downloading files and using online converters. So I made this to make my life easier. Easily the best of such extensions you will use._
 
 ---
 
