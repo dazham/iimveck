@@ -46,7 +46,6 @@ h1 {
     font-size: 0.75rem;
     color: var(--text-muted);
     margin: 4px 0 0 0;
-    text-transform: uppercase;
     letter-spacing: 1px;
 }
 

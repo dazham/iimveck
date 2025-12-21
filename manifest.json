@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Convertify by dazham",
+  "name": "iimveck by dazham",
   "version": "2.0",
   "description": "Convert images between different formats: png, jpeg, webp, ico, svg, heic, gif, bmp, tiff.",
   "action": {
