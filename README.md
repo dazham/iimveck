@@ -1,4 +1,8 @@
-# iimveck
+<h1>
+  <img src="icon.png" alt="iimveck icon" width="32" style="vertical-align: middle; margin-right: 8px;">
+  iimveck
+</h1>
+
 
 The best user-friendly chromium extension to:
 
