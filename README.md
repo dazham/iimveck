@@ -3,7 +3,7 @@
   iimveck
 </h1>
 
-Right-click. Convert. Download.
+<h3>Right-click. Convert. Download.</h3>
 
 
 - Convert images directly from the browser.
