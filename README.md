@@ -1,6 +1,6 @@
-# Convertify
+# iimveck
 
-The best user-friendly Chrome extension to:
+The best user-friendly chromium extension to:
 
 - Convert images directly from the browser
 - Download  direcly any formats through the context menu
@@ -30,7 +30,7 @@ The best user-friendly Chrome extension to:
 
 To Download the latest version from the [Releases](../../releases) tab.
 
-> ⚠️ Note: Only download `convertify-v2.0.0.zip`. Ignore the auto-generated source code files unless you're a developer.
+> ⚠️ Note: Only download `iimveck-v2.1.0.zip`. Ignore the auto-generated source code files unless you're a developer.
 
 1. Go to `chrome://extensions` in your Chrome browser.
 2. Enable **Developer mode** (top right).
@@ -42,6 +42,6 @@ To Download the latest version from the [Releases](../../releases) tab.
 
 Suggestions or run into issues?  
 Create an issue.  
-[Click here](https://github.com/dazham/Convertify/issues)
+[Click here](https://github.com/dazham/iimveck/issues)
 
 ---
