@@ -23,7 +23,6 @@
 
 <br />
 
-<img src="rep%20assets/ContextMenu.png" alt="Context menu options" width="500" />
 
 > Right-Click Context Menu
 
