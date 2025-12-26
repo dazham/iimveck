@@ -27,7 +27,7 @@ Convert and download images straight from the browser. Use the context menu to s
 
 ---
 
-### Getting Started
+### Download
 
 To Download the latest version from the [Releases](../../releases) tab.
 
