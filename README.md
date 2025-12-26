@@ -1,16 +1,14 @@
-<h1>
-  <img src="icon.png" alt="iimveck icon" width="32" style="vertical-align: middle; margin-right: 8px;">
-  iimveck
-</h1>
+<div align="center">
+  <img src="icon.png" alt="iimveck icon" width="100" style="vertical-align: middle; margin-right: 8px;">
+  <h1>iimveck</h1>
+  <h3>Right-click. Convert. Download.</h3>
+  <br>
+</div>
 
-<h3>Right-click. Convert. Download.</h3>
+### Description
+Convert and download images straight from the browser. Use the context menu to save images in any format you need, or use the extension popup to drag and drop the images. Formats include PNG, JPEG, WEBP, TIFF, BMP, GIF, HEIC, SVG, and ICO. 
 
-
-- Convert images directly from the browser.
-- Download images direcly on any formats through the context menu.
-- (PNG, JPEG, WEBP, TIFF, BMP, GIF, HEIC, SVG and ICO).
-
-> _I was frusted of constantly downloading files and using online converters. So I made this to make my life easier. Easily the best of such extensions you will use._
+> _I was frusted of constantly downloading files and using online converters. I made this to make my life easier. Easily the best of such extensions you will use._
 
 ---
 
